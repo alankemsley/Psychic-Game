@@ -1,5 +1,3 @@
-var x = 8;
-
 var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var answer = letters[Math.floor(Math.random() * 25 + 1)];
 var wins = 0;
