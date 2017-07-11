@@ -13,7 +13,7 @@ window.addEventListener("keyup", (guess) => {
   if (guessesLeft <= 0) {
     losses ++;
     lossesHTML.innerHTML = losses;
-    alert("FAILURE! Remember: Failure leads to anger, anger leads to hate, hate leads to the Dark Side. Again! See the new letter in my mind, you must.");
+    alert("FAILURE! Remember: Failure leads to anger, anger leads to hate, hate leads to the Dark Side. Again! Guess the new letter in my mind, you must.");
     answer = letters[Math.floor(Math.random() * 25 + 1)];
     guessesLeft = 9;
     console.log("Answer Key: The new answer is " + answer + ".");
@@ -22,11 +22,11 @@ window.addEventListener("keyup", (guess) => {
     guessesHTML.innerHTML = "None"
   } else {
       if (guess.key < "a" || guess.key > "z") {
-        alert("Stutter, did I? A letter, that is not.");
+        alert("Stutter, did I? A letter, you must guess.");
       } else if (guess.key.toUpperCase() === answer){
           wins ++;
           winsHTML.innerHTML = wins;
-          alert("SUCCESS! The letter " + guess.key.toUpperCase() + ", it is! Jedi Master, soon you will become! Again! See the new letter in my mind, you must.")
+          alert("SUCCESS! The letter " + guess.key.toUpperCase() + ", it is! Jedi Master, soon you will become! Again! Guess the new letter in my mind, you must.")
           answer = letters[Math.floor(Math.random() * 25 + 1)];
           guessesLeft = 9;
           console.log("Answer Key: The new answer is " + answer + ".");
