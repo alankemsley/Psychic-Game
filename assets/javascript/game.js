@@ -13,7 +13,7 @@ window.addEventListener("keyup", (guess) => {
   if (guessesLeft <= 0) {
     losses ++;
     lossesHTML.innerHTML = losses;
-    alert("MASTER YODA: Exhausted the number of attempts allowed, you have. Remember, failure leads to anger. Anger leads to hate. Hate leads to the Dark Side. Again! See the new letter in my mind, you must.");
+    alert("FAILURE! Remember: Failure leads to anger, anger leads to hate, hate leads to the Dark Side. Again! See the new letter in my mind, you must.");
     answer = letters[Math.floor(Math.random() * 25 + 1)];
     guessesLeft = 9;
     console.log("Answer Key: The new answer is " + answer + ".");
@@ -22,11 +22,11 @@ window.addEventListener("keyup", (guess) => {
     guessesHTML.innerHTML = "None"
   } else {
       if (guess.key < "a" || guess.key > "z") {
-        alert("MASTER YODA: Not a letter, that is! Again! A letter, you must see.");
+        alert("Stutter, did I? A letter, that is not.");
       } else if (guess.key.toUpperCase() === answer){
           wins ++;
           winsHTML.innerHTML = wins;
-          alert("MASTER YODA: Success! The letter " + guess.key.toUpperCase() + " in my mind, you see! Jedi Master, soon you will become! Again! See the new letter in my mind, you must.")
+          alert("SUCCESS! The letter " + guess.key.toUpperCase() + ", it is! Jedi Master, soon you will become! Again! See the new letter in my mind, you must.")
           answer = letters[Math.floor(Math.random() * 25 + 1)];
           guessesLeft = 9;
           console.log("Answer Key: The new answer is " + answer + ".");
@@ -38,7 +38,7 @@ window.addEventListener("keyup", (guess) => {
             guesses.push(guess.key.toUpperCase());
             guessesHTML.innerHTML = guesses.join(" ");
             guessesLeftHTML.innerHTML = (guessesLeft + 1);
-            alert("MASTER YODA: No! The letter " + guess.key.toUpperCase() + " in my mind, there is not. Do, or do not. There is no try! Again!");
+            alert("The letter " + guess.key.toUpperCase() + ", it is not. Do, or do not. There is no try!");
           }
     }
 });
