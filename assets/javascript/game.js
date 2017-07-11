@@ -8,26 +8,37 @@ var winsHTML = document.getElementById("wins");
 var lossesHTML = document.getElementById("losses");
 var guessesLeftHTML = document.getElementById("guessesLeft")
 var guessesHTML = document.getElementById("guesses");
-console.log("The answer is " + answer + ".");
+console.log("Answer Key: The answer is " + answer + ".");
 window.addEventListener("keyup", (guess) => {
   if (guessesLeft <= 0) {
     losses ++;
-    alert("GAME OVER! You have reached the number of guesses allowed! Shall we try again? Try to guess the new letter I'm thinking of now.");
+    lossesHTML.innerHTML = losses;
+    alert("MASTER YODA: Exhausted the number of attempts allowed, you have. Remember, failure leads to anger. Anger leads to hate. Hate leads to the Dark Side. Again! See the new letter in my mind, you must.");
     answer = letters[Math.floor(Math.random() * 25 + 1)];
     guessesLeft = 9;
-    console.log("The new answer is " + answer + ".");
+    console.log("Answer Key: The new answer is " + answer + ".");
+    guessesLeftHTML.innerHTML = "10";
+    guesses = [];
+    guessesHTML.innerHTML = "None"
   } else {
       if (guess.key < "a" || guess.key > "z") {
-        alert("You know that's not a letter, right? Try again, and guess a letter (in lower case) this time!");
+        alert("MASTER YODA: Not a letter, that is! Again! A letter, you must see.");
       } else if (guess.key.toUpperCase() === answer){
           wins ++;
-          alert("RIGHT! How did you know I was thinking of the letter " + guess.key.toUpperCase() + "? Let's play again! Try to guess the new letter I'm thinking of now.")
+          winsHTML.innerHTML = wins;
+          alert("MASTER YODA: Success! The letter " + guess.key.toUpperCase() + " in my mind, you see! Jedi Master, soon you will become! Again! See the new letter in my mind, you must.")
           answer = letters[Math.floor(Math.random() * 25 + 1)];
           guessesLeft = 9;
-          console.log("The new answer is " + answer + ".");
+          console.log("Answer Key: The new answer is " + answer + ".");
+          guessesLeftHTML.innerHTML = "10";
+          guesses = [];
+          guessesHTML.innerHTML = "None"
         } else {
             guessesLeft --;
-            alert("WRONG! I'm not thinking of the letter " + guess.key.toUpperCase() + ". Keep trying!");
+            guesses.push(guess.key.toUpperCase());
+            guessesHTML.innerHTML = guesses.join(", ");
+            guessesLeftHTML.innerHTML = (guessesLeft + 1);
+            alert("MASTER YODA: No! The letter " + guess.key.toUpperCase() + " in my mind, there is not. Do, or do not. There is no try! Again!");
           }
     }
 });

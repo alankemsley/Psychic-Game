@@ -2,18 +2,65 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Alan's Psychic Game</title>
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Oswald:300,400,500,600,700" rel="stylesheet">
+    <title>Jedi Mind Training</title>
   </head>
   <body>
-    <h1>Psychic Game</h1>
-    <h3>Guess the letter I'm thinking of!</h3>
-    <p id = "wins">Wins:</p>
-    <p id = "losses">Losses:</p>
-    <p id = "guessesLeft">Guesses left:</p>
-    <p>Your guesses so far:</p>
-    <div id = "guesses"></div>
+    <header id = "header">
+      <div class = "container">
+        <div class = "row">
+          <div class = "col-md-12">
+            <img src="https://fontmeme.com/permalink/170710/09bc5106e3d3a400f0e10bc2a5d990cd.png" alt="Jedi Mind Training" width = "100%">
+          </div>
+      </div>
+    </div>
+    </header>
+    <div class="row" id = "row1">
+      <div class="col-md-1"></div>
+      <div class="col-md-3" id = "yoda-div">
+        <div>
+          <img class = "center-block" id = "yoda" src="assets/images/yoda.png" alt="Master Yoda">
+        </div>
+      </div>
+      <div class="col-md-7" id = "text">
+        <h2>Welcome, Young Padawan!</h2>
+        <br>
+        <p>
+          Powerful, you have become, but Jedi Master you are not. The Jedi Mind Training, you must receive.
+        </p>
+        <p>
+          Simple, the training is. A letter from "A" to "Z", I have in my mind. Use the Force, you will. See the letter, you will. 10 attempts, I will give you. Reading this in my voice, you are.
+        </p>
+        <p>
+          May the Force be with you!
+        </p>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class = "row" id = "row2">
+      <div class = "col-md-3 text-center">
+        <h1 id = "wins">0</h1><h4>Success</h4>
+      </div>
+      <div class = "col-md-3 text-center">
+        <h1 id = "losses">0</h1><h4>Failure</h4>
+      </div>
+      <div class = "col-md-3 text-center">
+        <h1 id = "guessesLeft">10</h1><h4>Attempts Left</h4>
+      </div>
+      <div class = "col-md-3 text-center">
+        <h1 id = "guesses">None</h1><h4>Guessed</h4>
+      </div>
+    </div>
+    <footer class = "footer">
+      <div class="container">
+        <div class="col-12-md text-center">
+          &copy; 2017 Alan Kemsley
+        </div>
+      </div>
+    </footer>
   <script type="text/javascript" src="assets/javascript/game.js"></script>
   </body>
 </html>
