@@ -36,7 +36,7 @@ window.addEventListener("keyup", (guess) => {
         } else {
             guessesLeft --;
             guesses.push(guess.key.toUpperCase());
-            guessesHTML.innerHTML = guesses.join(", ");
+            guessesHTML.innerHTML = guesses.join(" ");
             guessesLeftHTML.innerHTML = (guessesLeft + 1);
             alert("MASTER YODA: No! The letter " + guess.key.toUpperCase() + " in my mind, there is not. Do, or do not. There is no try! Again!");
           }
