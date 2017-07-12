@@ -20,7 +20,7 @@ window.addEventListener("keyup", (guess) => {
     console.log("Answer Key: The new answer is " + answer + ".");
     guessesLeftHTML.innerHTML = "10";
     guesses = [];
-    guessesHTML.innerHTML = "None"
+    guessesHTML.innerHTML = "-"
   } else {
       //Second condition: Check whether the player pressed a letter key.
       if (guess.key < "a" || guess.key > "z") {
@@ -35,7 +35,7 @@ window.addEventListener("keyup", (guess) => {
           console.log("Answer Key: The new answer is " + answer + ".");
           guessesLeftHTML.innerHTML = "10";
           guesses = [];
-          guessesHTML.innerHTML = "None"
+          guessesHTML.innerHTML = "-"
         } else {
             guessesLeft --;
             guesses.push(guess.key.toUpperCase());

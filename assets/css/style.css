@@ -1,5 +1,5 @@
 body {
-  background-color: #ddd;
+  background-color: #aaa;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
@@ -7,7 +7,7 @@ body {
 body h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald', sans-serif;
   font-weight: 600;
-  color: #555;
+  color: #444;
 }
 
 #header {
@@ -30,7 +30,7 @@ p {
 }
 
 #row1 {
-  background-color: #eee;
+  background-color: #ddd;
   padding-top: 60px;
   padding-bottom: 50px;
   margin: 0;
@@ -47,6 +47,10 @@ p {
 #text {
   padding-left: 5%;
   padding-right: 5%;
+}
+
+.counter {
+  color: #FFD700;
 }
 
 /*Sticky Footer*/
