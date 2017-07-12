@@ -23,7 +23,7 @@ window.addEventListener("keyup", (guess) => {
     guessesHTML.innerHTML = "-"
   } else {
       //Second condition: Check whether the player pressed a letter key.
-      if (guess.key < "a" || guess.key > "z") {
+      if (guess.key < "a" || guess.key > "z"){
         alert("Stutter, did I? A letter, you must guess.");
         //Third condition: Check if the player won.
       } else if (guess.key.toUpperCase() === answer){
